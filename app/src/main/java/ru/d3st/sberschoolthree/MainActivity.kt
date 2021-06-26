@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
                 val textRussian = transliterateFromLatinToCyrillic(textEnglish)
                 etvRussian?.setText(textRussian)
             }
+
         }
 
         btnOnEnglish = findViewById<Button>(R.id.btn_english).apply {
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
                 val textLatin = transliterateFromCyrilicToLatin(textRussian)
                 etvEnglish?.setText(textLatin)
             }
+
         }
     }
 }

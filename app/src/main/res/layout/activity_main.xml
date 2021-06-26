@@ -6,33 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/etvRussian"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilRussian"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:digits=" абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
-        android:ems="10"
-        android:hint="@string/enter_russian"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/rightLine"
         app:layout_constraintStart_toStartOf="@+id/leftLine"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/etvEnglish"
-        android:digits=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        <EditText
+            android:id="@+id/etvRussian"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:digits=" абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+            android:ems="10"
+            android:hint="@string/enter_russian"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEnglish"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/english_pls"
-        android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/rightLine"
         app:layout_constraintStart_toStartOf="@+id/leftLine"
-        app:layout_constraintTop_toBottomOf="@+id/etvRussian"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/tilRussian">
+
+        <EditText
+            android:id="@+id/etvEnglish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:digits=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:ems="10"
+            android:hint="@string/english_pls"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/rightLine"
+            app:layout_constraintStart_toStartOf="@+id/leftLine"
+            app:layout_constraintTop_toBottomOf="@+id/tilRussian" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/leftLine"
