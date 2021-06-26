@@ -1,9 +1,9 @@
 package ru.d3st.sberschoolthree
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,20 +21,20 @@ class MainActivity : AppCompatActivity() {
         etvRussian = findViewById(R.id.etvRussian)
         etvEnglish = findViewById(R.id.etvEnglish)
 
-        btnOnEnglish = findViewById(R.id.btn_english)
-        btnOnRussian = findViewById(R.id.btn_rus)
-
-        btnOnEnglish?.setOnClickListener {
-            val textRussian = etvRussian?.text.toString()
-            val textLatin = transliterateFromCyrilicToLatin(textRussian)
-
-            etvEnglish?.setText(textLatin)
-        }
-        btnOnRussian?.setOnClickListener {
-            val textEnglish = etvEnglish?.text.toString()
-            val textRussian = transliterateFromLatinToCyrillic(textEnglish)
-            etvRussian?.setText(textRussian)
+        btnOnRussian = findViewById<Button>(R.id.btn_rus).apply {
+            setOnClickListener {
+                val textEnglish = etvEnglish?.text.toString()
+                val textRussian = transliterateFromLatinToCyrillic(textEnglish)
+                etvRussian?.setText(textRussian)
+            }
         }
 
+        btnOnEnglish = findViewById<Button>(R.id.btn_english).apply {
+            setOnClickListener {
+                val textRussian = etvRussian?.text.toString()
+                val textLatin = transliterateFromCyrilicToLatin(textRussian)
+                etvEnglish?.setText(textLatin)
+            }
+        }
     }
 }
