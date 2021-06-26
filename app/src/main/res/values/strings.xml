@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SberSchoolThree</string>
+    <string name="english_pls">English pls</string>
+    <string name="enter_russian">Введите на русском</string>
+    <string name="russian">Russian</string>
+    <string name="english">English</string>
+    <string name = "transliterate_to">Transliterate to:</string>
+</resources>
