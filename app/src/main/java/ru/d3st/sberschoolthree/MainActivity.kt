@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         btnOnEnglish = findViewById<Button>(R.id.btn_english).apply {
             setOnClickListener {
                 val textRussian = etvRussian?.text.toString()
-                val textLatin = transliterateFromCyrilicToLatin(textRussian)
+                val textLatin = transliterateFromCyrillicToLatin(textRussian)
                 etvEnglish?.setText(textLatin)
             }
 

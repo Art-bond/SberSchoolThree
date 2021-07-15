@@ -1,7 +1,7 @@
 package ru.d3st.sberschoolthree
 
 
-fun transliterateFromCyrilicToLatin(message: String): String? {
+fun transliterateFromCyrillicToLatin(message: String): String {
     val abcCyr = charArrayOf(
         ' ',
         'а',
@@ -132,7 +132,7 @@ fun transliterateFromCyrilicToLatin(message: String): String? {
         "Ts",
         "Ch",
         "Sh",
-        "Sch",
+        "Shch",
         "Y",
         "",
         "Ie",
@@ -151,7 +151,7 @@ fun transliterateFromCyrilicToLatin(message: String): String? {
     return builder.toString()
 }
 
-fun transliterateFromLatinToCyrillic(message: String): String? {
+fun transliterateFromLatinToCyrillic(message: String): String {
     val abcEnglish = charArrayOf(
         ' ',
         'a',

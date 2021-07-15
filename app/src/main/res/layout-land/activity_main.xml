@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +11,7 @@
         android:id="@+id/tilRussian"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="@dimen/margin_double"
         app:layout_constraintEnd_toStartOf="@+id/rightLine"
         app:layout_constraintStart_toStartOf="@+id/leftLine"
         app:layout_constraintTop_toTopOf="parent">
@@ -30,7 +31,7 @@
         android:id="@+id/tilEnglish"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="@dimen/margin_double"
         app:layout_constraintEnd_toStartOf="@+id/rightLine"
         app:layout_constraintStart_toStartOf="@+id/leftLine"
         app:layout_constraintTop_toBottomOf="@+id/tilRussian">
@@ -65,39 +66,41 @@
 
     <Button
         android:id="@+id/btn_rus"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/btn_height"
-        android:layout_marginStart="@dimen/margin_one"
-        android:layout_marginEnd="@dimen/margin_one"
         android:layout_marginBottom="@dimen/margin_one"
         android:text="@string/russian"
-        android:textSize="@dimen/btn_text_size"
-        app:layout_constraintBottom_toTopOf="@+id/btn_english"
-        app:layout_constraintEnd_toStartOf="@+id/rightLine"
-        app:layout_constraintStart_toStartOf="@+id/leftLine" />
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_english"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_translit"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btn_english"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/btn_height"
-        android:layout_marginStart="@dimen/margin_one"
-        android:layout_marginEnd="@dimen/margin_one"
-        android:layout_marginBottom="48dp"
         android:text="@string/english"
         android:textSize="@dimen/btn_text_size"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rightLine"
-        app:layout_constraintStart_toStartOf="@+id/leftLine" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_rus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_rus"
+        app:layout_constraintTop_toTopOf="@+id/btn_rus"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tv_translit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_one"
+        android:layout_marginTop="16dp"
         android:text="@string/transliterate_to"
-        android:textSize="@dimen/btn_text_size"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_rus"
         app:layout_constraintEnd_toStartOf="@+id/rightLine"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/leftLine" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/leftLine"
+        app:layout_constraintTop_toBottomOf="@+id/tilEnglish" />
 </androidx.constraintlayout.widget.ConstraintLayout>
